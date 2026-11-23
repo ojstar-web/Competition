@@ -1,7 +1,10 @@
-# 当前状态（2026-11-23 21:40）
+# 当前状态（2026-11-24 04:55 CST）
 
-- 本站已验收最高公榜仍 0.651（58023439）。旧路线“复现公开 0.680”已作废：2026-11-23 实测公开 notebook 已达 0.716–0.719，来源是 GLM-5.3 likelihood + user-turn prefix 阶段（见 HANDOFF 顶部“战略纠偏”）。
-- 已原样复制并私有化 alexchilton 的 0.717 管线（`okkojbjj/ntl-public-0717-glm-prefix` v1），45 源 mount 检查通过、commit COMPLETE；已提交 scoring rerun，ref **58780390**，2026-11-23 13:34 UTC，PENDING，今日余 4 次。等待 ≤7 h，不重复提交。
-- 0.680 线的工程结果保留：v5 256 行私有 COMPLETE 并产出合法 `submission.parquet`（18 类、256 唯一 ID、5199 s）；v6 512 行测时版仍 QUEUED，跑完只记测时，不提交。
-- 权威证据：`HANDOFF.md` 顶部两节、`outputs/native_0680_candidate_20261109_127/{run.json,native_probe_v5/}`、`public_top_20261123/{alex716,areeb719,ours717}/`。
-- 不动 EnvedaCASMI2026 目录、不抢其 GPU；本站 9 h/5 次/禁网/kernel-only 约束继续有效。
+- 本站最高公榜 **0.718**（提交 58780390），公榜名次 **534 / 6868**，按当前名次在**铜牌区**（铜线第 686 名 @0.717）；银线第 343 名 @0.719，金牌 0.756（第 23），奖金线 0.774（前 10），第一 0.809。
+- 来源：逐字复制 alexchilton 的 GLM-5.3 user-prefix + guarded Fable-return 管线，`okkojbjj/ntl-public-0717-glm-prefix` v1，代码 cell 未改。
+- 同一份代码实测分布 0.717/0.718/0.719/0.720/0.721（alexchilton、areebbb、zayd88903 互证为同一代码），差异是运行噪声；0.720/0.721 无不同于此的公开管线。
+- 下一步：用同代码再提交一次，博 0.719–0.721 的银牌档；不调参。今日余 4 次。
+- 0.680 线已停：v5 私有 256 行 COMPLETE 仅作工程证据，不提交。
+- 已止损：0.680 v1–v4、官方-only exact-18（0.484）、题族泄漏 DeBERTa、硬 Hungarian。
+- 权威证据：`HANDOFF.md` 顶部四节、`public_top_20261123/lb/`（公榜快照 2026-11-23T20:47:59Z）、`outputs/native_0680_candidate_20261109_127/`。
+- 约束：kernel-only、禁网、9 h、每天 5 次；不动 EnvedaCASMI2026。

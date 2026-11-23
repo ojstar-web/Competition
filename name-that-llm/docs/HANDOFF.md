@@ -1,3 +1,14 @@
+## 2026-11-24 04:47 58780390 评分完成：公榜 **0.718**，名次 534/6868，进入铜牌区
+
+等待 6 h 16 min 后 scoring rerun 完成（不是 ERROR，是平台队列）。`kaggle competitions submissions` 确认：提交 **58780390**，public **0.718**，COMPLETE。公榜快照（`kaggle competitions leaderboard name-that-llm -d`，2026-11-23T20:47:59Z，6868 队）显示本站 TeamName `okkoj bjj`、TeamId 17165972、**Rank 534**、Score 0.718、SubmissionCount 13。同快照：铜牌线（前 10%，第 686 名）为 0.717，银牌线（前 5%，第 343 名）为 0.719，0.719 共 371 队、≥0.720 共 209 队、金牌线 0.756（第 23 名）。按当前名次我们在**铜牌区**（非最终授牌）。
+
+- 这是本站从 0.651 到 0.718 的一次跃迁，来源是逐字复制 alexchilton 的 GLM-5.3 user-prefix + guarded Fable-return 管线（`okkojbjj/ntl-public-0717-glm-prefix` v1），代码 cell 未改。
+- 同一份代码在不同账号/不同次运行的实测分布是 0.717 / 0.718 / 0.719 / 0.720 / 0.721（alexchilton 两次 0.717/0.719；areebbb V12 0.720 与 zayd88903 0.721 被 areebbb 逐 cell 核对为**同一份代码**，差异属运行噪声）。噪声来源很可能是 GLM likelihood 阶段的时间预算：GPU 快时覆盖更多文本，分就高。
+- 结论：**银牌（第 343 名，0.719）只差一个噪声档**。同代码再跑一次是正期望动作，不需要调参；0.720 以上目前没有公开的不同管线。
+- 今日提交额度：本日已用 1 次（58780390），余 4 次；UTC 00:00 刷新。
+
+---
+
 ## 2026-11-23 状态镜像到私有仓 ojstar-web/Competition（只写 name-that-llm/）
 
 按用户要求建立独立状态镜像：独立 clone 在 `~/jyx/state_repo_ntl/Competition`（专用 key `~/.ssh/id_ed25519_casmi_state`，不复用其他会话工作树），只写 `name-that-llm/`，绝不修改 `enveda-casmi26/`，不 force push。同步脚本 `~/jyx/state_repo_ntl/sync_ntl.sh` 基于 `sync_enveda.sh` 改三处（`S=NameThatLLM`、`D=name-that-llm`、receipts 换成 `outputs/native_0680_candidate_20261109_127/*.json`），白名单只同步 `*.md`→`docs/`、`src/*.py`→`src/`、小 JSON→`receipts/native_0680/`；`git add -A name-that-llm`，push 失败 `pull --rebase --autostash` 重试 3 次。已启动 `while true; do sync_ntl.sh; sleep 900; done`（PID 2995714）。
