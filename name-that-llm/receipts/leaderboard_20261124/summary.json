@@ -1,0 +1,17 @@
+{
+  "source": "name-that-llm-publicleaderboard-2026-11-23T20:47:59.csv",
+  "captured_utc": "2026-11-23T20:47:59Z",
+  "teams": 6868,
+  "our_submission": 58780390,
+  "our_score": 0.718,
+  "our_rank": 534,
+  "our_submission_count": 13,
+  "bronze_rank_cutoff_10pct": 686,
+  "bronze_score_at_cutoff": 0.717,
+  "silver_rank_cutoff_5pct": 343,
+  "silver_score_at_cutoff": 0.719,
+  "gold_rank": 23,
+  "gold_score": 0.756,
+  "teams_at_or_above_0719": 371,
+  "teams_at_or_above_0720": 209
+}
