@@ -1,0 +1,14 @@
+{
+  "scope": "ruler v2, 4096 untouched fold1 groups, label-blind features",
+  "train_rows": 2539608,
+  "spectra": 37961,
+  "queries": 4118,
+  "groups_with_spectra": 4096,
+  "arms": {
+    "ood": 2056,
+    "control": 2062
+  },
+  "feature_sha256": "8f4f4e4d52949672b8c16e76cdfc8004dc4b372724368e84331069b905a53d9f",
+  "labels_sha256": "cf870fb7aeffbcb7f496ccc863b8b594873b05f1d4989db24ea929fcc976f594",
+  "selection_sha256": "376f46b39f66e01c509043aca8eae89840093fa0bb180472a9306b69b98cf830"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "completed": [
+    {
+      "partition": "confirm",
+      "policy": "pool20_pc5",
+      "accepted": true,
+      "mrr_delta": 0.012129685155929961
+    },
+    {
+      "partition": "final",
+      "policy": "alternate1_1",
+      "accepted": false,
+      "mrr_delta": 0.0504191967698554
+    }
+  ],
+  "remaining": []
+}

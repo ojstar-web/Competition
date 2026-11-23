@@ -1,0 +1,14 @@
+{
+  "scope": "campaign",
+  "query_count": 20,
+  "elapsed_seconds": 596.6599237788469,
+  "cuda_peak_bytes": 0,
+  "candidate_sha256": "19b0901e0a10edfab7c5dc6312397a469ed582eb39d70b0b8045949bf9c34ffb",
+  "feature_sha256": "8f4f4e4d52949672b8c16e76cdfc8004dc4b372724368e84331069b905a53d9f",
+  "labels_opened": false,
+  "source_pool_rows": 709677,
+  "fold": "fold1",
+  "source": "probe_core2 CORE + three-store window; zero popularity prior",
+  "ids_sha256": "e35029d0556acb901a72e5ff288b3e6357b7c84a453b75c867e4ca303f2370fa",
+  "source_sha256": "8b2e79fdd82f12891f904ed4ad21e885bf5b2d6a5b2525cb4e204ce3b8829f06"
+}
