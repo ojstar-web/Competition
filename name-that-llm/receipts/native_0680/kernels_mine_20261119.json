@@ -1,0 +1,702 @@
+[
+  {
+    "ref": "okkojbjj/ntl-native-0-680-private-probe-256",
+    "title": "ntl native 0 680 private probe 256",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-19T13:54:35.257000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s048-s073-paired-t4-cost-20261113",
+    "title": "X10 S048 S073 Paired T4 Cost 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T06:07:59.667000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s073-dual-student-patient-t4-20261113",
+    "title": "X10 S073 Dual Student Patient T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T05:37:05.573000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e620-dual-t4-20261113",
+    "title": "X10 E620 Dual T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T05:16:24.207000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e616-kd-patient-t4-20261113",
+    "title": "X10 E616 KD Patient T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T03:52:05.817000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e616-kd-single-t4-20261113",
+    "title": "X10 E616 KD Single T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T03:16:36.913000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e616-e563-kd-combo-t4-20261113",
+    "title": "X10 E616 E563 KD Combo T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T03:03:46.063000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s072-e505-draft768-patient-t4-20261113",
+    "title": "X10 S072 E505 Draft768 Patient T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T01:29:29.293000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s071-e505-draft768-t4-20261113",
+    "title": "X10 S071 E505 Draft768 T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T01:16:16.340000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s070-e505-paired-cost-t4-20261113",
+    "title": "X10 S070 E505 Paired Cost T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T00:53:23.043000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s070-e505-patient-t4-20261113",
+    "title": "X10 S070 E505 Patient T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-13T00:19:38.847000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-subset-combo-full-t4-20261113",
+    "title": "X10 Subset Combo Full T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T22:25:32.847000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s068-e505-study-t4-20261113",
+    "title": "X10 S068 E505 Study T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T21:31:30.407000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s057-stage-profile-t4-20261113",
+    "title": "X10 S057 Stage Profile T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T21:25:42.197000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s057-fullfit-parallel-t4-20261113",
+    "title": "X10 S057 Fullfit Parallel T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T21:12:45.103000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s057-parallel-t4-20261113",
+    "title": "X10 S057 Parallel T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T21:00:05.693000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e563-image-cost-t4-20261113",
+    "title": "X10 E563 Image Cost T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T20:32:12.623000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e563-parallel-full-t4-20261113",
+    "title": "X10 E563 Parallel Full T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T20:06:22.227000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s062-e561-image-cost-t4-20261113",
+    "title": "X10 S062 E561 Image Cost T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T19:23:09.047000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e561-best-full-t4-20261113",
+    "title": "X10 E561 Best Full T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T19:04:37.413000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s061-image-cost-t4-20261113",
+    "title": "X10 S061 Image Cost T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T19:01:16.380000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e563-best-full-t4-20261113",
+    "title": "X10 E563 Best Full T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T18:55:04.633000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-s057-t4-cost-20261113",
+    "title": "X10 S057 T4 Cost 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T18:42:40.293000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e562-ema-full-t4-20261113",
+    "title": "X10 E562 EMA Full T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T18:41:05.047000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x10-e560-ema-full-t4-20261113",
+    "title": "X10 E560 EMA Full T4 20261113",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T18:28:08.163000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/s055-full-t4-csv-timing-20261112",
+    "title": "S055 Full T4 CSV Timing 20261112",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-12T13:28:15.533000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/s055-deterministic-t4-timing-20261111",
+    "title": "S055 Deterministic T4 Timing 20261111",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-11T14:34:39.747000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x5-s046-t4-cost-20261111",
+    "title": "X5 S046 T4 Cost 20261111",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-11T13:56:37.567000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-s043-s044-t4-latency-20261110",
+    "title": "X2 S043 S044 T4 Latency 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T14:41:14.473000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-cpu-dataset-v6-control-20261110",
+    "title": "X2 CPU Dataset V6 Control 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T12:01:35.367000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-t4-slot-probe-retry01-20261110",
+    "title": "X2 T4 Slot Probe Retry01 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T11:59:15.833000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-s043-s044-tta-only-t4-20261110",
+    "title": "X2 S043 S044 TTA Only T4 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T11:11:06.830000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-t4-dataset-mount-control-20261110",
+    "title": "X2 T4 Dataset Mount Control 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T11:09:22.057000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-cpu-dataset-mount-control-20261110",
+    "title": "X2 CPU Dataset Mount Control 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T10:35:43.633000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-t4-queue-control-20261110",
+    "title": "X2 T4 Queue Control 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T10:30:51.187000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-34-other-audit",
+    "title": "ntl native 0680 34 other audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:17:31.247000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-34-sources-audit",
+    "title": "ntl native 0680 34 sources audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:17:02.193000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-33-sources-audit",
+    "title": "ntl native 0680 33 sources audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:16:33.467000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-32-sources-audit",
+    "title": "ntl native 0680 32 sources audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:16:14.623000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-no-datasets-audit",
+    "title": "ntl native 0680 no datasets audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:15:25.850000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-no-kernels-audit",
+    "title": "ntl native 0680 no kernels audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:15:00.523000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-models-audit",
+    "title": "ntl native 0680 models audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:14:40.317000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-no-models-audit",
+    "title": "ntl native 0680 no models audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:14:21.757000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-datasets-mount-audit",
+    "title": "ntl native 0680 datasets mount audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:14:04.927000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-hub-mount-audit",
+    "title": "ntl native 0680 hub mount audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:13:45.027000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-single-mount-audit",
+    "title": "ntl native 0680 single mount audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T09:12:23.540000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/x2-replacement-two-member-t4-latency-20261110",
+    "title": "X2 Replacement Two Member T4 Latency 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T08:46:03.763000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/s044-t4-latency-20261110",
+    "title": "S044 T4 Latency 20261110",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T08:09:35.243000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-m1-fold0-no-e2-smoke-20261109",
+    "title": "CASMI26 m1 fold0 no e2 smoke 20261109",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T07:43:50.530000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/bigdata-s019-corrected-t4-100",
+    "title": "BigData s019 corrected T4 100",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-10T05:30:54.437000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-native-0680-mount-audit",
+    "title": "ntl native 0680 mount audit",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-09T14:36:57.650000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-v31-private-probe-256",
+    "title": "NTL V31 Private Probe 256",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-07T08:56:58.483000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/bigdata-s020-materials-t4-private-20261106",
+    "title": "BigData s020 materials T4 private 20261106",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-06T14:29:34.077000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-public477-spectrum-borda-5b",
+    "title": "CASMI26 public477 spectrum borda 5b",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T17:23:34.607000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-public477-cosine-ablation-5a",
+    "title": "CASMI26 public477 cosine ablation 5a",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T17:10:08.163000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-public477-acquisition-balance-4b",
+    "title": "CASMI26 public477 acquisition balance 4b",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T16:46:42.390000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-m1-custom-leader-36-diagnostic",
+    "title": "casmi26 m1 custom leader 36 diagnostic",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T16:26:16.833000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-m1-midweight1-private",
+    "title": "casmi26 m1 midweight1 private",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T16:14:07.987000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-m1-custom-leader-private",
+    "title": "casmi26 m1 custom leader private",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T15:50:12.287000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/bigdata-s019-materials-t4-private-20261105",
+    "title": "BigData s019 materials T4 private 20261105",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T15:34:54.847000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-m1-adjacent-physical-private",
+    "title": "casmi26 m1 adjacent physical private",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T15:26:56.990000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/bigdata-s015-t4-cost-private-20261105",
+    "title": "BigData s015 T4 Cost Private 20261105",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T15:05:30.303000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-public-0-477-m1-exact-reproduction",
+    "title": "CASMI26 public 0.477 m1 exact reproduction",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T14:52:29.787000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-v465-main40-fresh140-paired-private",
+    "title": "CASMI26 V465 Main40 fresh140 paired private",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T11:37:19.457000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o6-fresh140-paired-exact-ties-private",
+    "title": "CASMI26 O6 fresh140 paired exact ties private",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T09:34:56.533000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/ntl-v27-current-assets",
+    "title": "NTL V27 Current Assets",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T08:07:20.227000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-nb-svm-fold-0-private-cpu",
+    "title": "Name That LLM NB-SVM Fold 0 Private CPU",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T07:24:45.783000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-v17-pool-map-private-cpu-20261105",
+    "title": "CASMI26 V17 pool map private CPU 20261105",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-05T06:30:03.790000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o5-spectrum-polarity-paired-20261103",
+    "title": "CASMI26 O5 spectrum polarity paired 20261103",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-03T13:24:59.830000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o4-adduct-merge-paired-gpu",
+    "title": "CASMI26 O4 adduct merge paired GPU",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-03T11:26:30.127000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o1-fixed100-paired-rankagg-gpu",
+    "title": "CASMI26 O1 fixed100 paired rankagg GPU",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-02T14:26:54.660000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-official-exact18-capacity",
+    "title": "Name That LLM Official Exact18 Capacity",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-02T14:12:37.347000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-official-exact18",
+    "title": "Name That LLM Official Exact18",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-02T14:03:15.867000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-deberta-old-pool-stage1-fold-0",
+    "title": "Name That LLM DeBERTa Old Pool Stage1 Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-11-01T08:25:43.923000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-two-stage-c2-fold-0",
+    "title": "Name That LLM Qwen2.5 Two Stage C2 Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T23:11:43.217000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-two-stage-c1-fold-0",
+    "title": "Name That LLM Qwen2.5 Two Stage C1 Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T21:53:50.403000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-deberta-clean-outer-fold-2",
+    "title": "Name That LLM DeBERTa Clean Outer Fold 2",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T21:35:10.987000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-deberta-clean-outer-fold-1",
+    "title": "Name That LLM DeBERTa Clean Outer Fold 1",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T21:20:31.797000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-deberta-clean-outer-fold-0",
+    "title": "Name That LLM DeBERTa Clean Outer Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T21:01:23.203000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-two-stage-br-fold-2",
+    "title": "Name That LLM Qwen2.5 Two Stage BR Fold 2",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T19:23:13.793000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-two-stage-br-fold-1",
+    "title": "Name That LLM Qwen2.5 Two Stage BR Fold 1",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T17:55:58.620000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-two-stage-br-fold-0",
+    "title": "Name That LLM Qwen2.5 Two Stage BR Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T16:39:23.300000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-deberta-base-identity-probe",
+    "title": "Name That LLM DeBERTa Base Identity Probe",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T16:26:36.533000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen3-official-outer-fold-2",
+    "title": "Name That LLM Qwen3 Official Outer Fold 2",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T15:27:01.133000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen3-official-outer-fold-1",
+    "title": "Name That LLM Qwen3 Official Outer Fold 1",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T14:17:48.027000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen3-official-outer-fold-0",
+    "title": "Name That LLM Qwen3 Official Outer Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T05:58:16.987000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o2-dev87-bond-depth-private",
+    "title": "CASMI26 O2 dev87 bond depth private",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-30T01:14:06.097000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-official-outer-fold-2",
+    "title": "Name That LLM Qwen2.5 Official Outer Fold 2",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T19:06:57.733000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-official-outer-fold-1",
+    "title": "Name That LLM Qwen2.5 Official Outer Fold 1",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T18:08:49.653000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o1-dev87-paired-metfrag-private-20261030",
+    "title": "CASMI26 O1 dev87 paired MetFrag private 20261030",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T17:36:54.080000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o1-gpu-io-probe-private-20261030",
+    "title": "CASMI26 O1 GPU IO probe private 20261030",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T17:29:11.627000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-official-outer-fold-0",
+    "title": "Name That LLM Qwen2.5 Official Outer Fold 0",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T16:54:34.893000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-qwen2-5-gradient-probe",
+    "title": "Name That LLM Qwen2.5 Gradient Probe",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T15:51:18.913000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-o1-canonical-cost-probe-private-cpu",
+    "title": "CASMI26 O1 canonical cost probe private CPU",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T14:48:29.373000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-official-llama-access-probe",
+    "title": "name-that-llm-official-llama-access-probe",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T11:47:46.027000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-q35-member-timing-512",
+    "title": "Name That LLM Q35 Member Timing 512",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T11:24:14.053000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-current-pool-increment-screen",
+    "title": "Name That LLM Current Pool Increment Screen",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T10:12:10.567000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-deberta-token-length",
+    "title": "Name That LLM DeBERTa Token Length",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T08:46:01.883000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/casmi26-haideptry-v17-reproduction",
+    "title": "CASMI26 Haideptry V17 Reproduction",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-29T08:17:34.960000",
+    "totalVotes": 0
+  },
+  {
+    "ref": "okkojbjj/name-that-llm-nlm-v27-capacity-4000",
+    "title": "Name That LLM NLM V27 Capacity 4000",
+    "author": "okkoj bjj",
+    "lastRunTime": "2026-10-28T11:04:24.267000",
+    "totalVotes": 0
+  }
+]
