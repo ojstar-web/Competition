@@ -1,3 +1,11 @@
+## 2026-11-23 状态镜像到私有仓 ojstar-web/Competition（只写 name-that-llm/）
+
+按用户要求建立独立状态镜像：独立 clone 在 `~/jyx/state_repo_ntl/Competition`（专用 key `~/.ssh/id_ed25519_casmi_state`，不复用其他会话工作树），只写 `name-that-llm/`，绝不修改 `enveda-casmi26/`，不 force push。同步脚本 `~/jyx/state_repo_ntl/sync_ntl.sh` 基于 `sync_enveda.sh` 改三处（`S=NameThatLLM`、`D=name-that-llm`、receipts 换成 `outputs/native_0680_candidate_20261109_127/*.json`），白名单只同步 `*.md`→`docs/`、`src/*.py`→`src/`、小 JSON→`receipts/native_0680/`；`git add -A name-that-llm`，push 失败 `pull --rebase --autostash` 重试 3 次。已启动 `while true; do sync_ntl.sh; sleep 900; done`（PID 2995714）。
+
+已推送 commits `9a616c2`（docs/src/receipts）与 `953f336`（README_AI.md），工作树与 `origin/main` 一致，`enveda-casmi26/` 73 个跟踪文件零改动，`name-that-llm/` 共 556 KB，无 parquet/npy/pt/zip/权重/`data/`/`outputs/` 大产物。`name-that-llm/README_AI.md` 用实测数字写榜单坐标；其中对“公开最强 0.680”按 2026-11-23 21:10 的实测更正为 0.716–0.719，并保留 0.680→≈2089 名作为 11-08 旧状态，避免把过期结论写进镜像。
+
+---
+
 ## 2026-11-23 战略纠偏：公榜公开配方已到 0.717–0.719，0.680 线作废；已提交 0.717 公开管线（58780390）
 
 **前提被外部事实推翻。** `kaggle kernels list --competition name-that-llm --sort-by scoreDescending`（2026-11-23 21:10 本地）显示公开 notebook 已有 0.719 / 0.718 / 0.717 / 0.716 一批，最近更新 2026-11-22/23；alexchilton 的 0.716 笔记（`public_top_20261123/alex716/`，其 cell 0/3 记录本账号 58780390 之前的 125 次提交）写明：0.716 由 `estopadilla` 的 GLM-5.3 likelihood + user-turn prefix 阶段带来，0.717 由 dennis6886 的 guarded Fable-return 带来，且“几乎每一步提升都来自原样运行更新的公开 notebook”。本项目 NOW.md 里“公开最强 0.680、只到 31%”已过期 10 天，不能再作为路线依据。
