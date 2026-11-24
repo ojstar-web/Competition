@@ -1,3 +1,15 @@
+## 2026-11-24 12:40 第二次同代码仍 0.718；转有真实代码增量的 sibling-odds 0.720/0.721（58811392）
+
+`58794719`（同 `ntl-public-0717-glm-prefix` v1，同代码第二次提交）已 COMPLETE，public **0.718**，与第一次完全相同。两次同代码都是 0.718，说明本账号暂时抽不到 0.719 的噪声档，继续重跑同代码的边际价值低。公榜仍 534/6868，铜牌区；银线 0.719（第 343 名）。
+
+改为有**真实代码增量**的公开线：`areebbb/0-720-preserve-glm-to-fable-corrections`（V16 逐 cell 复现 `zayd88903/0-721-name-that-llm`，二者被 areebbb 核对为同一份代码）。它是在我们已跑的 0.717 管线上加 **ranjeet258 的 Sibling Odds**（按 likelihood odds 变化修正同族近似决策，保留 guarded Fable），0.720/0.721 是这条线的实测分。已原样复制为私有 `okkojbjj/ntl-public-0720-sibling-odds`（仅改 id/title/code_file、删 `id_no`/`docker_image`、设私有；60 cells、26+10+9 源、commit COMPLETE，17 分钟）。已提交 scoring rerun：ref **58811392**，2026-11-24 04:41 UTC，初态 PENDING，今日余 4 次。
+
+- 预期 0.718–0.721；只有 ≥0.719 才进银牌区（当前第 343 名）。
+- 若这次仍 ≤0.718，则说明公开线在本账号的天花板就是 0.718，下一步应停止抽签，转做有 OOF 证据的新信号，而不是继续换公开 fork。
+- PENDING 历史：上一次 6 h 16 min 才起跑，本次按同样预期等待；不重复提交。
+
+---
+
 ## 2026-11-24 04:47 58780390 评分完成：公榜 **0.718**，名次 534/6868，进入铜牌区
 
 等待 6 h 16 min 后 scoring rerun 完成（不是 ERROR，是平台队列）。`kaggle competitions submissions` 确认：提交 **58780390**，public **0.718**，COMPLETE。公榜快照（`kaggle competitions leaderboard name-that-llm -d`，2026-11-23T20:47:59Z，6868 队）显示本站 TeamName `okkoj bjj`、TeamId 17165972、**Rank 534**、Score 0.718、SubmissionCount 13。同快照：铜牌线（前 10%，第 686 名）为 0.717，银牌线（前 5%，第 343 名）为 0.719，0.719 共 371 队、≥0.720 共 209 队、金牌线 0.756（第 23 名）。按当前名次我们在**铜牌区**（非最终授牌）。
