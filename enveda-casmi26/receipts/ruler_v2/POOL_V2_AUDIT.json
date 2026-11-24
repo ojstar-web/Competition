@@ -1,0 +1,7 @@
+{
+  "ood_groups": 2048,
+  "source_rows": 710701,
+  "reduced_rows": 708653,
+  "removed_rows": 2048,
+  "excluded_key_intersection": 0
+}
