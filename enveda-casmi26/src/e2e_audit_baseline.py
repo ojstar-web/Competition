@@ -1,4 +1,4 @@
-"""End-to-end audit baseline combining pool20_pc5 candidates and GLACIER 0.5 reranking."""
+"""End-to-end audit baseline combining pool20_pc5 (b_top25) and GLACIER 0.5 reranking."""
 from __future__ import annotations
 
 import argparse
@@ -12,11 +12,11 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from bond_fragment_probe import CAMPAIGN, FOLD, ROOT, bootstrap, rr, sha
-from iceberg_local_probe import candidate_meta
 
 GL_PKG = ROOT / "outputs/orthogonal_glacier_20261119_01"
 ICE_PKG = ROOT / "outputs/orthogonal_simulator_20261119_01"
 OUT_ROOT = ROOT / "outputs/e2e_audit_20261124_01"
+PC_META = OUT_ROOT / "pubchem_meta.json"
 
 sys.path.insert(0, str(GL_PKG))
 from gl_fuse import rerank_multi, run_gl  # noqa: E402
@@ -38,6 +38,17 @@ def load_partition(partition: str) -> tuple[list[dict], dict[int, dict]]:
     labels = {int(r["query_id"]): r for r in pq.read_table(FOLD / "scoring_labels_corrected.parquet").to_pylist()}
     rows = [json.loads(s) for s in cand.read_text().splitlines()]
     return rows, labels
+
+
+def load_all_meta(keys: set[str]) -> dict[str, dict]:
+    table = pq.read_table(FOLD / "reduced_pool/pool_meta.parquet", columns=["key", "smiles", "formula"])
+    meta = {r["key"]: {"smiles": r["smiles"], "formula": r["formula"]} for r in table.to_pylist() if r["key"] in keys}
+    if PC_META.exists():
+        pc = json.loads(PC_META.read_text())
+        for k in keys - meta.keys():
+            if k in pc:
+                meta[k] = pc[k]
+    return meta
 
 
 def load_query_metadata(needed: set[int]) -> tuple[dict[int, list[dict]], dict[int, dict]]:
@@ -72,48 +83,64 @@ def load_query_metadata(needed: set[int]) -> tuple[dict[int, list[dict]], dict[i
     return spectra, qmeta
 
 
-def prepare_ood(partition: str) -> Path:
-    rows, labels = load_partition(partition)
-    ood_rows = [r for r in rows if labels[int(r["query_id"])]["arm"] == "ood"]
-    keys = {x[0] for r in ood_rows for x in r["a_top25"]}
-    meta = candidate_meta(keys)
-    needed = {int(r["query_id"]) for r in ood_rows}
+def load_cached_gl(partition: str) -> dict[str, dict[str, float | None]]:
+    cached = {}
+    probe_out = GL_PKG / f"{partition}_probe/gl_out.json"
+    if probe_out.exists():
+        cached.update(json.loads(probe_out.read_text()))
+    inc_out = OUT_ROOT / f"{partition}_missing/gl_out.json"
+    if inc_out.exists():
+        for qid, smap in json.loads(inc_out.read_text()).items():
+            cached.setdefault(qid, {}).update(smap)
+    return cached
+
+
+def prepare_missing(partition: str) -> Path:
+    rows, _ = load_partition(partition)
+    cached = load_cached_gl(partition)
+    keys = {x[0] for r in rows for x in r["b_top25"]}
+    meta = load_all_meta(keys)
+    needed = {int(r["query_id"]) for r in rows}
     spectra, _ = load_query_metadata(needed)
     items = []
-    for r in ood_rows:
+    for r in rows:
         qid = int(r["query_id"])
-        order = [x[0] for x in r["a_top25"]]
-        count = Counter(meta[k]["formula"] for k in order)
-        smis = list(dict.fromkeys(meta[k]["smiles"] for k in order if count[meta[k]["formula"]] >= 2))
-        items.append({"mid": str(qid), "cands": smis, "spectra": spectra[qid]})
-    out_dir = OUT_ROOT / f"{partition}_ood"
+        order = [x[0] for x in r["b_top25"]]
+        formulas = [meta[k]["formula"] if k in meta else f"__UNK_{k}" for k in order]
+        count = Counter(formulas)
+        q_cache = cached.get(str(qid), {})
+        smis = list(dict.fromkeys(
+            meta[k]["smiles"]
+            for k, f in zip(order, formulas)
+            if k in meta and count[f] >= 2 and meta[k]["smiles"] not in q_cache
+        ))
+        if smis and spectra[qid]:
+            items.append({"mid": str(qid), "cands": smis, "spectra": spectra[qid]})
+    out_dir = OUT_ROOT / f"{partition}_missing"
     out_dir.mkdir(parents=True, exist_ok=True)
     in_path = out_dir / "gl_in.json"
     in_path.write_text(json.dumps(items, separators=(",", ":")) + "\n")
     manifest = {
-        "partition": f"fold1 {partition} ood",
-        "queries": len(items),
-        "queries_with_covered_spectra": sum(bool(x["spectra"]) for x in items),
-        "queries_with_multi_candidate_formula": sum(bool(x["cands"]) for x in items),
+        "partition": f"fold1 {partition} b_top25 incremental",
+        "queries_needing_inference": len(items),
         "covered_spectra": sum(len(x["spectra"]) for x in items),
         "candidates": sum(len(x["cands"]) for x in items),
-        "sha256": {
-            "candidates": sha(cand_path(partition)),
-            "gl_input": sha(in_path),
-            "source": sha(Path(__file__)),
-        },
+        "sha256": {"candidates": sha(cand_path(partition)), "gl_input": sha(in_path), "source": sha(Path(__file__))},
     }
     (out_dir / "prepare.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    print(f"[{partition} ood] prepared:", json.dumps({k: manifest[k] for k in ("queries", "queries_with_covered_spectra", "covered_spectra", "candidates")}))
+    print(f"[{partition} missing] prepared:", json.dumps({k: manifest[k] for k in ("queries_needing_inference", "covered_spectra", "candidates")}))
     return out_dir
 
 
-def run_gl_ood(partition: str, budget_s: float = 1800.0) -> None:
-    out_dir = OUT_ROOT / f"{partition}_ood"
+def run_gl_missing(partition: str, budget_s: float = 1800.0) -> None:
+    out_dir = OUT_ROOT / f"{partition}_missing"
     in_path = out_dir / "gl_in.json"
     if not in_path.exists():
-        prepare_ood(partition)
+        prepare_missing(partition)
     items = json.loads(in_path.read_text())
+    if not items:
+        (out_dir / "gl_out.json").write_text("{}\n")
+        return
     run_gl(
         str(GL_PKG),
         items,
@@ -152,12 +179,9 @@ def summarize_slice(mol_rows: list[dict]) -> dict:
 
 def audit_partition(partition: str) -> dict:
     rows, labels = load_partition(partition)
-    ctrl_scores = json.loads((GL_PKG / f"{partition}_probe/gl_out.json").read_text())
-    ood_scores = json.loads((OUT_ROOT / f"{partition}_ood/gl_out.json").read_text())
-    scores = {**ctrl_scores, **ood_scores}
-
-    keys = {x[0] for r in rows for x in r["a_top25"]}
-    meta = candidate_meta(keys)
+    scores = load_cached_gl(partition)
+    keys = {x[0] for r in rows for x in r["b_top25"]}
+    meta = load_all_meta(keys)
     needed = {int(r["query_id"]) for r in rows}
     _, qmeta = load_query_metadata(needed)
 
@@ -166,10 +190,10 @@ def audit_partition(partition: str) -> dict:
     for r in rows:
         qid = int(r["query_id"])
         lbl = labels[qid]
-        original = [x[0] for x in r["a_top25"]]
-        smis = [meta[k]["smiles"] for k in original]
-        formulas = [meta[k]["formula"] for k in original]
-        base = [float(x[1]) for x in r["a_top25"]]
+        original = [x[0] for x in r["b_top25"]]
+        smis = [meta[k]["smiles"] if k in meta else f"__UNK_{k}" for k in original]
+        formulas = [meta[k]["formula"] if k in meta else f"__UNK_{k}" for k in original]
+        base = [float(x[1]) for x in r["b_top25"]]
         gl_map = scores.get(str(qid), {})
         order = rerank_multi(smis, original, base, formulas, [gl_map], [0.5], top_n=25)
         reranked = [original[i] for i in order]
@@ -214,18 +238,18 @@ def audit_partition(partition: str) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("step", choices=["prepare-ood", "run-gl-ood", "audit"])
+    parser.add_argument("step", choices=["prepare-missing", "run-gl-missing", "audit"])
     parser.add_argument("--partition", choices=["confirm", "final", "all"], default="all")
     parser.add_argument("--budget", type=float, default=1800.0)
     args = parser.parse_args()
 
     parts = ["confirm", "final"] if args.partition == "all" else [args.partition]
-    if args.step == "prepare-ood":
+    if args.step == "prepare-missing":
         for p in parts:
-            prepare_ood(p)
-    elif args.step == "run-gl-ood":
+            prepare_missing(p)
+    elif args.step == "run-gl-missing":
         for p in parts:
-            run_gl_ood(p, budget_s=args.budget)
+            run_gl_missing(p, budget_s=args.budget)
     elif args.step == "audit":
         OUT_ROOT.mkdir(parents=True, exist_ok=True)
         all_mols = []
