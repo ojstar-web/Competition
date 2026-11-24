@@ -149,7 +149,7 @@ def run_gl_missing(partition: str, budget_s: float = 1800.0) -> None:
         budget_s=budget_s,
         site=str(ICE_PKG / "ice_site"),
         wheels=str(ICE_PKG / "wheels"),
-        python=sys.executable,
+        python="/home/yuanyn/anaconda3/envs/mypoltype2/bin/python",
     )
 
 
