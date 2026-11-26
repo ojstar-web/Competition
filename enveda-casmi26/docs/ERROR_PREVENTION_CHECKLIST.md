@@ -82,3 +82,9 @@
 - **Observed:** the v7 confirm feature worker stopped at query 231862 with `No candidates for query`; its frozen `b_top25` is genuinely empty. The failure occurred after other query feature files were committed but before any ranker fit or confirm scoring.
 - **Cause and impact:** the feature worker handled empty training mass windows but wrongly rejected an empty fixed evaluation list. The v6 evaluator had already allowed this query and scored its reciprocal rank and coverage as zero.
 - **Repair and evidence:** the feature worker now writes a zero-row 27-column file for an empty evaluation list, and prediction skips model inference for zero rows. The original candidate list remains empty. Resume uses already committed per-query features; see `outputs/v7_plan_20261126_01/features_confirm.log` and the frozen candidate row. Check completion and v6 replay before accepting confirm results.
+
+## 2026-11-26: Local ranker dependencies absent from core environment
+
+- **Observed:** the first v7 ranker training invocation stopped at import with `ModuleNotFoundError: joblib`; no model fit began. The project `.venv` lacked `joblib`, `scikit-learn`, and its `threadpoolctl` dependency, although the existing `src/local_ranker_probe.py` used them.
+- **Cause and impact:** `requirements.txt` pinned core data packages but did not list the ranker stack. Feature artifacts were unaffected.
+- **Repair and evidence:** installed pinned `scikit-learn==1.8.0`, `joblib==1.5.3`, and `threadpoolctl==3.6.0` in the project `.venv` without changing NumPy/SciPy; a direct HistGBM import succeeded, and the pins were added to `requirements.txt`. The preflight failures are recorded in `outputs/v7_plan_20261126_01/ranker_train_preflight_failure.txt`; verify the model training receipt before accepting the training run.
