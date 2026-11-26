@@ -64,3 +64,9 @@
 - **Observed:** the first channel-weight probe stopped at `Baseline vector replay differs for q000` before scoring or writing a report.
 - **Cause and impact:** scaling the nominal 70/30 vector and normalizing it again introduced floating-point differences. The frozen baseline had not changed; no scientific result was produced by that attempt.
 - **Repair and evidence:** `src/channel_weight_probe.py` returns the original vector for 70/30. The rerun exited 0, replayed all 64 frozen baseline Top25 lists, and wrote `outputs/channel_weight_20261119_dev_01/report.json`. Reuse the exact baseline calculation when an identity control is required.
+
+## 2026-11-26: Fold1 ranker feature worker environment and notebook Numba cache
+
+- **Observed:** the first feature worker failed during FPNet model loading with `AssertionError: Torch not compiled with CUDA enabled`; no query feature was written. The first confirm worker then failed at its first spectral call while restoring a Numba disk cache for functions extracted from an `.ipynb` (`AttributeError` in `importlib.import_module(None)`). The immediate cache fix failed before library loading with `TypeError: required field "lineno" missing from expr`.
+- **Cause and impact:** this project's `.venv` has CPU-only PyTorch; an extracted notebook function lacks a stable importable module identity for Numba's disk cache. Replacing an AST decorator value also needs location metadata. The failed attempts created no scientific feature artifact; logs remain in `outputs/v7_plan_20261126_01/features_train.log` and `features_confirm.log`.
+- **Repair and evidence:** use `device="cpu"`; set `cache=False` on extracted Numba decorators and call `ast.fix_missing_locations` before compilation. The resumed train worker wrote query features; the restarted confirm worker loaded the masked reference library and proceeded to scoring. Retain per-query files for bounded resumption.
