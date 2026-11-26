@@ -1,5 +1,11 @@
 # Project Error Prevention
 
+## 2026-11-26: Verify comparable submission rows before Top-25 statistics
+
+- **Observed:** the first v7 difference audit stopped at its 25-candidate assertion for the public477 reproduction CSV; no audit report was written by that attempt.
+- **Cause and impact:** the file has 12 genuine 25-candidate rows and 388 single-`CCO` placeholders. Treating every row as a complete ranking would make 400-row Top-1/Top-25 agreement misleading and could falsely explain the public-score gap.
+- **Repair and evidence:** `outputs/v7_plan_20261126_01/audit_diff.py` classifies placeholder rows first and compares the 12 valid rows separately; the corrected run exited 0 and wrote `diff_audit.json` with per-row results and input SHA. Check per-row list cardinality and placeholder semantics before comparing submissions.
+
 ## 2026-11-19: Read candidate tuple shape before a new probe
 
 - **Observed:** the first GLACIER margin probe exited while unpacking `a_top25` entries as two values; no scoring or report occurred.

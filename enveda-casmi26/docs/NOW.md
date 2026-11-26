@@ -6,6 +6,10 @@ Develop and train CASMI 2026 methods locally, using public evidence and structur
 
 ## Established facts
 
+- V7 task one: the nominal public477 local reproduction CSV has only 12 genuine Top-25 rankings and 388 `CCO` placeholders. On the 12 comparable rows, v6 Top-1 agrees 9/12; full 400-row score-gap attribution is unsupported. See `outputs/v7_plan_20261126_01/diff_audit.json`.
+- V7 task two preflight: frozen fold1 selection contains 2,048 evaluation identity groups and 2,060 `inchikey14` values. A SHA-bound reference mask excludes all 18,772 evaluation spectra from the 2,539,608-row training library, with zero selected keys retained. The mask has not yet been wired into `lv`/`ap` inference. See `outputs/v7_plan_20261126_01/fold1_reference_mask_receipt.json` and `STATUS.md`.
+- V7 ranker training cohort is frozen from 1,024 non-evaluation fold1 identity groups: 1,030 molecular queries and 9,159 spectra, with zero identity overlap against all 2,048 evaluation groups. A combined mask excludes 27,931 train/evaluation spectra from reference matching. No `lv/ap` features, ranker, or confirm/final score exists yet. See `outputs/v7_plan_20261126_01/ranker_training_preparation.json`.
+
 - Best recorded public leaderboard score is 0.477 (submission 58027349); older 0.333 status is stale. See `outputs/public_highscore_research_20261109_01/DECISION.md`.
 - The published V17 `rank_train.npz` has 142,762 candidate rows, 31 features and 1,638 query groups across 819 paired mode IDs. Its group IDs have not been independently mapped to molecular structures.
 - The independent fold1 simulated missing-pool test supported a pool-top20 plus PubChem-top5 rescue, but the 50/50 simulated mixture cannot predict hidden-set class prevalence or public score. See `outputs/fold1_ood_retrieval_20261110_01/CONFIRM_GATE.json`.
