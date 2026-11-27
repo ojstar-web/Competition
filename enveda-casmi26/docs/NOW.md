@@ -6,6 +6,7 @@ Develop and train CASMI 2026 methods locally, using public evidence and structur
 
 ## Established facts
 
+- Apex v3 Notebook 已按 `outputs/apex_opt_v3_plan_20261127_01/PROPOSAL.md` 生成于 `outputs/apex_opt_v3_20261127_01/`：P1 只放宽低库证据且 ExtLib2 未改 Rank 1 的分子，保留原 Rank 1 双信号门控及高质量 Rank 1–2 的 v2 规则；P2 增加候选/分数审计，未启用未经身份和标定核验的 fold1/v7 权重。30 个代码 Cell、17 个内嵌脚本及 46 个冻结 Cell 通过 AST；五个合成门控案例通过。尚无 Kaggle 运行成绩或 MRR 增益证据，详见 `outputs/apex_opt_v3_20261127_01/CHANGES.md`。
 - `apex_opt_v2` 本地 Notebook 已生成：Cell 1 启用 ExtLib2，Cell 25 将其作为第 18 个数据源绑定到已核查的远端文件，Cell 50 对 VT0 跨越 pool 前两名增加指纹优势与独立路线先验/PubChem 双信号门控。30 个代码 Cell 和内嵌 VT 核心通过 AST，合成门控案例通过；尚未在 Kaggle 运行。详见 `outputs/apex_opt_v2_20261127_01/CHANGES.md`。
 - V7 task one: the nominal public477 local reproduction CSV has only 12 genuine Top-25 rankings and 388 `CCO` placeholders. On the 12 comparable rows, v6 Top-1 agrees 9/12; full 400-row score-gap attribution is unsupported. See `outputs/v7_plan_20261126_01/diff_audit.json`.
 - V7 task two completed masked `lv/ap` and 27D features for 1,030 train, 256 confirm, and 257 final queries. The training cohort has zero identity overlap with all 2,048 evaluation groups; the combined reference mask excludes 27,931 train/evaluation spectra, and the evaluation mask excludes 18,772 evaluation spectra. Two mode-selected HistGBM models were trained on 23,478 candidate rows. See `outputs/v7_plan_20261126_01/STATUS.md` and `ranker_training_report.json`.
